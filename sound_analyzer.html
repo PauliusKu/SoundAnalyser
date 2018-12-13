@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<script src="scripts/recording.js"></script>
+		<script src="scripts/recorder.js"></script>
+		<script src="scripts/controls.js"></script>
 	</head>
-	<body>
-		<button onclick="recordStop()" id="record-stop-button">Record</button>
-		<button onclick="playAudio()" disabled id="play-audio-button">Play</button>
+	<body onload="initialize()">
+		<div>
+			<table id="controls_table">
+				<tr>
+					<td>
+						<input type="button" id="record_stop_button" onclick="recordStop()" value="record">
+					</td>
+					<td>
+						<input type="button" id="generate_images_button" onclick="" value="generate">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<audio id="audioPlayer"></audio>
+					</td>
+				</tr>
+			</table>
+		</div>
 	</body>
 </html>
