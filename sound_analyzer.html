@@ -12,12 +12,46 @@
 						<input type="button" id="record_stop_button" onclick="recordStop()" value="record">
 					</td>
 					<td>
-						<input type="button" id="generate_images_button" onclick="" value="generate">
+						<input type="button" id="generate_images_button" onclick="generateImages()" value="generate">
 					</td>
 				</tr>
 				<tr>
 					<td colspan="2">
 						<audio id="audioPlayer"></audio>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div>
+			<table id="images_table">
+				<tr>
+					<td colspan="2">
+						<div>
+							<img id="spectrum_image">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="button" id="spectrum_settings" onclick="" value="advanced settings" style="display: none">
+					</td>
+					<td>
+						<input type="button" id="spectrum_download" onclick="" value="download"  style="display: none">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div>
+							<img id="cepstrum_image">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="button" id="cepstrum_settings" onclick="" value="advanced settings" style="display: none">
+					</td>
+					<td>
+						<input type="button" id="cepstrum_download" onclick="" value="download"  style="display: none">
 					</td>
 				</tr>
 			</table>

@@ -1,7 +1,6 @@
 var audioContext;
 var recorder;
 var isRecording;
-var buffer;
 
 function startUserMedia(stream) {
     var input = audioContext.createMediaStreamSource(stream);
@@ -16,6 +15,7 @@ function initialize() {
         window.URL = window.URL || window.webkitURL;
         audioContext = new AudioContext;
         isRecording = false;
+        document.getElementById("generate_images_button").disabled = true;
     } catch (e) {
         alert('No web audio support in this browser!');
     }
@@ -33,8 +33,9 @@ function recordStop(){
         isRecording = false;
         button.value = "record";
         recorder && recorder.stop();
-        createPlaybackNode();
+        createAudioObject();
         recorder.clear();
+        document.getElementById("generate_images_button").disabled = false;
     }
 }
 
@@ -47,5 +48,20 @@ function createAudioObject() {
         audioPlayer.controls = true;
         audioPlayer.src = url;
     });
+}
+
+function generateImages() {
+    insertImage("spectrum_image", "images/spectrum.jpg");
+    document.getElementById("spectrum_settings").setAttribute("style", "display: inline");
+    document.getElementById("spectrum_download").setAttribute("style", "display: inline");
+    insertImage("cepstrum_image", "images/cepstrum.png");
+    document.getElementById("cepstrum_settings").setAttribute("style", "display: inline");
+    document.getElementById("cepstrum_download").setAttribute("style", "display: inline");
+}
+
+function insertImage(destination, source){
+    var image = document.getElementById(destination);
+    image.setAttribute("src", source);
+    //galima prideti daugiau atributu
 }
 
