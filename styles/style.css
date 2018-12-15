@@ -1,9 +1,7 @@
-
 .center {
-    margin: auto;
-    width: 60%;
-    /*border: 3px solid #4f8aff;*/
-    padding: 10px;
+
+    margin: 100px auto;
+    padding: 20px;
     background: rgba(255, 255, 255, 0.6)
 }
 
@@ -25,43 +23,54 @@ th, td {
     text-align: center;
 }
 
-.button {
-    width: 300px;
-    height: 150px;
-    background-color: #4CAF50; /* Green */
-    border: none;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
+/*.button {*/
+    /*width: 300px;*/
+    /*height: 150px;*/
+    /*background-color: #4CAF50; !* Green *!*/
+    /*border: none;*/
+    /*padding: 16px 32px;*/
+    /*text-align: center;*/
+    /*text-decoration: none;*/
+    /*display: inline-block;*/
+    /*font-size: 16px;*/
+    /*margin: 4px 2px;*/
+    /*-webkit-transition-duration: 0.4s; !* Safari *!*/
+    /*transition-duration: 0.4s;*/
+    /*cursor: pointer;*/
+/*}*/
 
-.buttonRecord {
-    visibility: visible;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    font-size: 50px;
-}
+/*.buttonRecord {*/
+    /*visibility: visible;*/
+    /*height: 100px;*/
+    /*width: 100px;*/
+    /*margin: 10px;*/
+    /*border-radius: 50%;*/
+    /*font-size: 50px;*/
+/*}*/
+/*.buttonRecord:active {*/
+    /*height: 110px;*/
+    /*width: 110px;*/
+    /*margin: 0;*/
+/*}*/
 
-.buttonRecord:hover {
+/*.buttonRecord:hover {*/
+    /*height: 110px;*/
+    /*width: 110px;*/
+    /*margin: 0;*/
+/*}*/
 
-}
+/*.buttonGenerate {*/
+    /*!*visibility: collapse;*!*/
+/*}*/
 
-.buttonGenerate {
-    /*visibility: collapse;*/
-}
+/*.buttonGenerate:hover {*/
 
-.buttonGenerate:hover {
-
-}
+/*}*/
 
 @media only screen and (max-aspect-ratio: 1/1){
+    .center{
+        width: 85%;
+    }
     body {
         background-image: url("travelnow-or-crylater-721287-unsplash.jpg");
         background-repeat:   no-repeat;
@@ -70,6 +79,10 @@ th, td {
 }
 
 @media only screen and (min-aspect-ratio: 1/1) {
+    .center {
+        width: 60%;
+    }
+
     body {
         background-image: url("travelnow-or-crylater-721287-unsplash.jpg");
         background-size: 1750px;
@@ -100,4 +113,37 @@ h2 {
     letter-spacing: .1em;
     top: 25%;
     width: 100%;
+}
+
+
+.button-container {
+    text-align: center;
+}
+
+.btn {
+    color: #91c5d2;
+    background: #fff;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 35px;
+    letter-spacing: 1px;
+    width: 150px;
+    height: 150px;
+    border: 2px solid #55b0d2;
+    border-radius: 50%;
+    transition-duration: .2s;
+    display: inline-block;
+    perspective: 1000px;
+    transform-origin: center bottom 0px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.btn:hover {
+    background: #55b0d2;
+    color: white;
+}
+
+.btn:active {
+    transform: matrix(0.95, 0, 0, 0.95, 0, 0);
 }
