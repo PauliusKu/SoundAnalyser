@@ -1,0 +1,103 @@
+
+.center {
+    margin: auto;
+    width: 60%;
+    /*border: 3px solid #4f8aff;*/
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.6)
+}
+
+table {
+    margin: 0 auto;
+    padding: 10px;
+    color: black;
+    font-size: 20px;
+    width: 90%;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+.button {
+    width: 300px;
+    height: 150px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.buttonRecord {
+    visibility: visible;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    font-size: 50px;
+}
+
+.buttonRecord:hover {
+
+}
+
+.buttonGenerate {
+    /*visibility: collapse;*/
+}
+
+.buttonGenerate:hover {
+
+}
+
+@media only screen and (max-aspect-ratio: 1/1){
+    body {
+        background-image: url("images/travelnow-or-crylater-721287-unsplash.jpg");
+        background-repeat:   no-repeat;
+        background-attachment: fixed;
+    }
+}
+
+@media only screen and (min-aspect-ratio: 1/1) {
+    body {
+        background-image: url("images/travelnow-or-crylater-721287-unsplash.jpg");
+        background-size: 1750px;
+        background-attachment: fixed;
+    }
+}
+
+textarea:focus, button:focus{
+    outline: none;
+}
+
+h1 {
+    font: 600 1.5em/1 'Raleway', sans-serif;
+    color: rgba(0,0,0,.6);
+    text-align: center;
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    top: 25%;
+    width: 100%;
+}
+
+h2 {
+    font: 600 1.5em/1 'Raleway', sans-serif;
+    color: rgba(0,0,0,.8);
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: .1em;
+    top: 25%;
+    width: 100%;
+}
