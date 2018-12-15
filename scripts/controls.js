@@ -52,11 +52,13 @@ function createAudioObject() {
 
 function generateImages() {
     insertImage("spectrum_image", "images/spectrum.jpg");
-    document.getElementById("spectrum_settings").setAttribute("style", "display: inline");
-    document.getElementById("spectrum_download").setAttribute("style", "display: inline");
+    document.getElementById("spectrum_settings_button").setAttribute("style", "display: inline");
+    document.getElementById("spectrum_download_button").setAttribute("style", "display: inline");
+    document.getElementById("spectrum_download_button_a").setAttribute("href", "images/spectrum.jpg");
     insertImage("cepstrum_image", "images/cepstrum.png");
-    document.getElementById("cepstrum_settings").setAttribute("style", "display: inline");
-    document.getElementById("cepstrum_download").setAttribute("style", "display: inline");
+    document.getElementById("cepstrum_settings_button").setAttribute("style", "display: inline");
+    document.getElementById("cepstrum_download_button").setAttribute("style", "display: inline");
+    document.getElementById("cepstrum_download_button_a").setAttribute("href", "images/cepstrum.png");
 }
 
 function insertImage(destination, source){
@@ -65,3 +67,18 @@ function insertImage(destination, source){
     //galima prideti daugiau atributu
 }
 
+function openSpectrumSettings(){
+    document.getElementById("spectrum_settings").style.display = "block";
+}
+
+function openCepstrumSettings(){
+    document.getElementById("cepstrum_settings").style.display = "block";
+}
+
+function closeSpectrumSettings(){
+    document.getElementById("spectrum_settings").style.display = "none";
+}
+
+function closeCepstrumSettings(){
+    document.getElementById("cepstrum_settings").style.display = "none";
+}
