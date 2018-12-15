@@ -15,7 +15,7 @@ function initialize() {
         window.URL = window.URL || window.webkitURL;
         audioContext = new AudioContext;
         isRecording = false;
-        document.getElementById("generate_images_button").disabled = true;
+        // document.getElementById("generate_images_button").disabled = true;
     } catch (e) {
         alert('No web audio support in this browser!');
     }
