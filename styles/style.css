@@ -63,7 +63,7 @@ th, td {
 
 @media only screen and (max-aspect-ratio: 1/1){
     body {
-        background-image: url("images/travelnow-or-crylater-721287-unsplash.jpg");
+        background-image: url("travelnow-or-crylater-721287-unsplash.jpg");
         background-repeat:   no-repeat;
         background-attachment: fixed;
     }
@@ -71,7 +71,7 @@ th, td {
 
 @media only screen and (min-aspect-ratio: 1/1) {
     body {
-        background-image: url("images/travelnow-or-crylater-721287-unsplash.jpg");
+        background-image: url("travelnow-or-crylater-721287-unsplash.jpg");
         background-size: 1750px;
         background-attachment: fixed;
     }

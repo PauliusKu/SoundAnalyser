@@ -5,11 +5,12 @@
     <title>Title</title>
     <script src="scripts/recorder.js"></script>
     <script src="scripts/controls.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/sound_analyzer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body onload="initialize()">
-<div class="center"> fyjfyjhf
+<div class="center">
     <table id="controls_table">
         <tr>
             <td>
@@ -39,34 +40,57 @@
         <tr>
             <td colspan="2">
                 <div>
-                    <img id="spectrum_image" alt="" src="">
+                    <img id="spectrum_image">
                 </div>
             </td>
         </tr>
         <tr>
             <td>
-                <input type="button" id="spectrum_settings" onclick="" value="advanced settings" style="display: none">
+                <input type="button" id="spectrum_settings_button" onclick="openSpectrumSettings()" value="advanced settings" style="display: none">
             </td>
             <td>
-                <input type="button" id="spectrum_download" onclick="" value="download"  style="display: none">
+                <a id="spectrum_download_button_a" download="spectrogram">
+                    <input type="button" id="spectrum_download_button" onclick="" value="download"  style="display: none">
+                </a>
             </td>
         </tr>
         <tr>
             <td colspan="2">
                 <div>
-                    <img id="cepstrum_image" alt="" src="">
+                    <img id="cepstrum_image">
                 </div>
             </td>
         </tr>
         <tr>
             <td>
-                <input type="button" id="cepstrum_settings" onclick="" value="advanced settings" style="display: none">
+                <input type="button" id="cepstrum_settings_button" onclick="openCepstrumSettings()" value="advanced settings" style="display: none">
             </td>
             <td>
-                <input type="button" id="cepstrum_download" onclick="" value="download"  style="display: none">
+                <a id="cepstrum_download_button_a" download="cepstrogram">
+                    <input type="button" id="cepstrum_download_button" onclick="" value="download"  style="display: none">
+                </a>
             </td>
         </tr>
     </table>
+</div>
+<div id="spectrum_settings" class="modal">
+    <div class="modal-content">
+        <span class="close"  onclick="closeSpectrumSettings()">&times;</span>
+        <p>Spectrogram settings</p>
+        <p>Plot axis</p>
+        <p>Number of overlapped samples</p>
+        <p>Number of DFT points</p>
+        <p>Sampling interval</p>
+    </div>
+</div>
+<div id="cepstrum_settings" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeCepstrumSettings()">&times;</span>
+        <p>Cepstrum</p>
+        <p>Plot axis</p>
+        <p>Sampling frequenzy, Hz</p>
+        <p>Sampling interval</p>
+    </div>
 </div>
 </body>
 </html>
