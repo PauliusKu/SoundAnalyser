@@ -78,9 +78,20 @@
         <span class="close"  onclick="closeSpectrumSettings()">&times;</span>
         <p>Spectrogram settings</p>
         <p>Plot axis</p>
+        <form id="custom_spectrum_axis">
+        	<input type="radio" name="spectrum_axis" value="x">X-axis
+        	<input type="radio" name="spectrum_axis" value="y">Y-axis
+        </form>
         <p>Number of overlapped samples</p>
+        <input type="number" id="custom_spectrum_noverlap">
         <p>Number of DFT points</p>
-        <p>Sampling interval</p>
+        <input type="number" id="custom_spectrum_nfft">
+        <p>Sampling interval, s</p>
+        Start:
+        <input type="number" id="custom_spectrum_start">
+        End:
+        <input type="number" id="custom_spectrum_end">
+        <input type="button" id="custom_spectrum_settings_apply" value="apply">
     </div>
 </div>
 <div id="cepstrum_settings" class="modal">
@@ -88,8 +99,18 @@
         <span class="close" onclick="closeCepstrumSettings()">&times;</span>
         <p>Cepstrum</p>
         <p>Plot axis</p>
+        <form id="custom_cepstrum_axis">
+        	<input type="radio" name="cepstrum_axis" value="x">X-axis
+        	<input type="radio" name="cesptrum_axis" value="y">Y-axis
+        </form>
         <p>Sampling frequenzy, Hz</p>
-        <p>Sampling interval</p>
+        <input type="number" id="custom_cepstrum_frequency">
+        <p>Sampling interval, s</p>
+        Start:
+        <input type="number" id="custom_cepstrum_start">
+        End:
+        <input type="number" id="custom_cepstrum_end">
+        <input type="button" id="custom_cepstrum_settings_apply" value="apply">
     </div>
 </div>
 </body>
