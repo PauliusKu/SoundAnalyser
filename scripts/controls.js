@@ -27,15 +27,17 @@ function recordStop(){
     var button = document.getElementById("record_stop_button");
     if (!isRecording){
         isRecording = true;
-        button.value = "stop";
+        button.innerHTML = "<i class=\"fa fa-pause\"></i>";
+        document.getElementById("arrow").innerHTML = "&#x2190; Press to stop";
         recorder && recorder.record();
     } else {
         isRecording = false;
-        button.value = "record";
+        button.innerHTML = "<i class=\"fa fa-play\"></i>";
         recorder && recorder.stop();
         createAudioObject();
         recorder.clear();
-        document.getElementById("generate_images_button").disabled = false;
+        document.getElementById("arrow").innerHTML = "&#x2190; Press to record again<br>or view results &#x2192;";
+        document.getElementById("generate_images_button").style.visibility = "visible";
     }
 }
 

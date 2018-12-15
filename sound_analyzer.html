@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
     <script src="scripts/recorder.js"></script>
     <script src="scripts/controls.js"></script>
@@ -11,34 +12,35 @@
 </head>
 <body onload="initialize()">
 <div class="center">
+    <h1>Sound Analyzer</h1>
+    <h2>
+        This sound analyzer will help you to increase your stupidity level to maximum. Kuzma, Kuzma, Kuzma. Our team wish you the best!
+    </h2>
     <table id="controls_table">
         <tr>
             <td>
-            <h1>Sound Analyzer</h1>
-            <h2>
-                This sound analyzer will help you to increase your stupidity level to maximum. Our team wish you the best!
-            </h2>
-        </td>
-        </tr>
-        <tr>
-            <td>
                 <div class="button-container">
-                    <button type="button" class="btn" id="record_stop_button" onclick="recordStop()"><i class="fa fa-play"></i></button>
+                    <button type="button" class="btn" id="record_stop_button" onclick="recordStop()" ><i class="fa fa-play"></i></button>
                 </div>
-                <!--&lt;!&ndash;<button type="button" class="button buttonRecord" id="record_stop_buttona" onclick="recordStop()"><i class="fa fa-play"></i></button>&ndash;&gt;-->
-            <!--</td>-->
-            <!--<td>-->
-                <!--<button type="button" class="button buttonRecord" id="generate_images_buttonas" onclick="generateImages()">jdtyhjtrhrthytrh</button>-->
-            <!--</td>-->
-        </tr>
-        <tr>
+            </td>
             <td colspan="2">
+                <h3 id="arrow">&#x2190; Press to start recording</h3>
                 <audio id="audioPlayer"></audio>
             </td>
+            <td class="collapsedGen">
+                <div class="button-container">
+                    <button type="button" class="btn btnGen" id="generate_images_button" onclick="generateImages()">View</button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <!--<td colspan="2">-->
+                <!--<audio id="audioPlayer"></audio>-->
+            <!--</td>-->
         </tr>
     </table>
 </div>
-<div>
+<div class="center">
     <table id="images_table">
         <tr>
             <td colspan="2">

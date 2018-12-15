@@ -1,5 +1,11 @@
-.center {
 
+body {
+    background-image: url("travelnow-or-crylater-721287-unsplash.jpg");
+    background-size: 1750px;
+    background-attachment: fixed;
+}
+
+.center {
     margin: 100px auto;
     padding: 20px;
     background: rgba(255, 255, 255, 0.6)
@@ -7,19 +13,12 @@
 
 table {
     margin: 0 auto;
-    padding: 10px;
-    color: black;
-    font-size: 20px;
-    width: 90%;
-}
-
-th {
-    background-color: #4CAF50;
-    color: white;
+    padding: 0;
+    width: 100%;
 }
 
 th, td {
-    padding: 8px;
+    padding: 0;
     text-align: center;
 }
 
@@ -69,24 +68,13 @@ th, td {
 
 @media only screen and (max-aspect-ratio: 1/1){
     .center{
-        width: 85%;
-    }
-    body {
-        background-image: url("travelnow-or-crylater-721287-unsplash.jpg");
-        background-repeat:   no-repeat;
-        background-attachment: fixed;
+        width: 95%;
     }
 }
 
 @media only screen and (min-aspect-ratio: 1/1) {
     .center {
         width: 60%;
-    }
-
-    body {
-        background-image: url("travelnow-or-crylater-721287-unsplash.jpg");
-        background-size: 1750px;
-        background-attachment: fixed;
     }
 }
 
@@ -121,7 +109,7 @@ h2 {
 }
 
 .btn {
-    color: #91c5d2;
+    color: #55b0d2;
     background: #fff;
     text-decoration: none;
     text-align: center;
@@ -146,4 +134,11 @@ h2 {
 
 .btn:active {
     transform: matrix(0.95, 0, 0, 0.95, 0, 0);
+}
+
+.btnGen{
+    visibility: collapse;
+}
+.collapsedGen{
+    width: 0;
 }
