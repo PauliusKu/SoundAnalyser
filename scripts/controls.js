@@ -28,7 +28,10 @@ function recordStop(){
     if (!isRecording){
         isRecording = true;
         button.innerHTML = "<i class=\"fa fa-pause\"></i>";
-        document.getElementById("arrow").innerHTML = "&#x2190; Press to stop";
+        document.getElementById("arrow").style.content = "tryhttyhrt";
+        if (window.innerWidth > 1180)
+            document.getElementById("arrow").innerHTML = "&#x2190; Press to stop<br>&nbsp;";
+        else document.getElementById("arrow").innerHTML = "&#x2191; Press to stop<br>&nbsp;";
         recorder && recorder.record();
     } else {
         isRecording = false;
@@ -36,7 +39,10 @@ function recordStop(){
         recorder && recorder.stop();
         createAudioObject();
         recorder.clear();
-        document.getElementById("arrow").innerHTML = "&#x2190; Press to record again<br>or view results &#x2192;";
+        document.getElementById("arrow").style.content = "trhtrhrtht";
+        if (window.innerWidth > 1180)
+            document.getElementById("arrow").innerHTML = "&#x2190; Press to record again<br>or view results &#x2192;";
+        else document.getElementById("arrow").innerHTML = "&#x2191; Press to record again<br>or view results &#x2193;";
         document.getElementById("generate_images_button").style.visibility = "visible";
     }
 }
@@ -53,6 +59,7 @@ function createAudioObject() {
 }
 
 function generateImages() {
+    document.getElementById("resultsView").style.visibility = "visible";
     insertImage("spectrum_image", "images/spectrum.jpg");
     document.getElementById("spectrum_settings_button").setAttribute("style", "display: inline");
     document.getElementById("spectrum_download_button").setAttribute("style", "display: inline");

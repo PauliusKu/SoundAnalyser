@@ -16,67 +16,58 @@
     <h2>
         This sound analyzer will help you to increase your stupidity level to maximum. Kuzma, Kuzma, Kuzma. Our team wish you the best!
     </h2>
-    <table id="controls_table">
-        <tr>
-            <td>
-                <div class="button-container">
-                    <button type="button" class="btn" id="record_stop_button" onclick="recordStop()" ><i class="fa fa-play"></i></button>
-                </div>
-            </td>
-            <td colspan="2">
-                <h3 id="arrow">&#x2190; Press to start recording</h3>
+
+    <ul class="nav">
+        <li class="startLi">
+            <div class="button-container">
+                <button type="button" class="btn" id="record_stop_button" onclick="recordStop()" ><i class="fa fa-play"></i></button>
+            </div>
+        </li>
+        <li class="startLi">
+            <div class="button-container">
+                <h3 id="arrow"></h3>
                 <audio id="audioPlayer"></audio>
-            </td>
-            <td class="collapsedGen">
-                <div class="button-container">
-                    <button type="button" class="btn btnGen" id="generate_images_button" onclick="generateImages()">View</button>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <!--<td colspan="2">-->
-                <!--<audio id="audioPlayer"></audio>-->
-            <!--</td>-->
-        </tr>
-    </table>
+            </div>
+        </li>
+        <li class="startLi">
+            <div class="button-container">
+                <button type="button" class="btn btnGen" id="generate_images_button" onclick="generateImages()">View</button>
+            </div>
+        </li>
+    </ul>
 </div>
-<div class="center">
-    <table id="images_table">
-        <tr>
-            <td colspan="2">
-                <div>
-                    <img id="spectrum_image">
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input type="button" id="spectrum_settings_button" onclick="openSpectrumSettings()" value="advanced settings" style="display: none">
-            </td>
-            <td>
+<div id="resultsView" class="center viewResults">
+    <ul class="nav">
+        <li class="resultsLi">
+            <div class="imageDiv">
+                <img id="spectrum_image">
+            </div>
+        </li>
+        <li class="resultsLi">
+            <div class="sett">
+                <button id="spectrum_settings_button" class="btn1" onclick="openSpectrumSettings()" style="display: none">settings</button>
                 <a id="spectrum_download_button_a" download="spectrogram">
-                    <input type="button" id="spectrum_download_button" onclick="" value="download"  style="display: none">
+                    <button id="spectrum_download_button" class="btn1" onclick="" style="display: none">download</button>
                 </a>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <div>
-                    <img id="cepstrum_image">
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input type="button" id="cepstrum_settings_button" onclick="openCepstrumSettings()" value="advanced settings" style="display: none">
-            </td>
-            <td>
+            </div>
+        </li>
+    </ul>
+
+    <ul class="nav">
+        <li class="resultsLi">
+            <div class="imageDiv">
+                <img id="cepstrum_image">
+            </div>
+        </li>
+        <li class="resultsLi">
+            <div class="sett">
+                <button id="cepstrum_settings_button" class="btn1" onclick="openCepstrumSettings()" style="display: none">settings</button>
                 <a id="cepstrum_download_button_a" download="cepstrogram">
-                    <input type="button" id="cepstrum_download_button" onclick="" value="download"  style="display: none">
+                    <button id="cepstrum_download_button" class="btn1" onclick="" style="display: none">download</button>
                 </a>
-            </td>
-        </tr>
-    </table>
+            </div>
+        </li>
+    </ul>
 </div>
 <div id="spectrum_settings" class="modal">
     <div class="modal-content">
