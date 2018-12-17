@@ -68,6 +68,7 @@ function generateImages() {
     document.getElementById("cepstrum_settings_button").setAttribute("style", "display: inline");
     document.getElementById("cepstrum_download_button").setAttribute("style", "display: inline");
     document.getElementById("cepstrum_download_button_a").setAttribute("href", "images/cepstrum.png");
+    document.getElementById("word").innerHTML = "Kebabas";
 }
 
 function insertImage(destination, source){
