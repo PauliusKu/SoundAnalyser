@@ -11,7 +11,10 @@ function startUserMedia(stream) {
 function initialize() {
     try {
         window.AudioContext = window.AudioContext || window.webkitAudioContext;
-        navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia;
+        navigator.getUserMedia = navigator.getUserMedia = ( navigator.getUserMedia ||
+                       navigator.webkitGetUserMedia ||
+                       navigator.mozGetUserMedia ||
+                       navigator.msGetUserMedia);
         window.URL = window.URL || window.webkitURL;
         audioContext = new AudioContext;
         isRecording = false;
