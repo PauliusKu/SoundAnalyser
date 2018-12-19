@@ -2,9 +2,9 @@ var audioContext;
 var recorder;
 var isRecording;
 
-var words = ["apple", "allocator", "arrow","bottle", "boolean", "bomb", "commit die", "case", "cancer", "drum", "double", "deez nuts", "else", "ebola", "erect",
-"false", "for", "fail", "gobble", "gulag", "George W. Bush", "hitler", "Hiroshima", "harambe", "inbred", "ironic", "Israel", "jew", "John Cena", "jiggle", "knee grows", 
-"kebabas su astriu ir cesnakiniu padazu issinesimui", "keylogger", "linux", "load", "lego", "Mein kampf", "MySQL", "mind", "native", "negromancy", "nemo",
+var words = ["apple", "allocator", "arrow","bottle", "boolean", "bomb", "Kuzma", "case", "cancer", "drum", "double", "nuts", "else", "ebola", "erect",
+"false", "for", "fail", "gobble", "gulag", "George W. Bush", "Lukis", "Hiroshima", "harambe", "inbred", "ironic", "Israel", "Gudas", "John Cena", "jiggle", "Saulius",
+"kebabas su astriu ir cesnakiniu padazu issinesimui", "keylogger", "linux", "load", "lego", "Mein kampf", "MySQL", "mind", "native", "Daugis", "nemo",
 "Osama", "opera", "octopus", "private", "public", "pipe", "return", "runescape", "rainbows", "std", "squid", "santa", "try", "this", "turkey", "ur mum", "using", "undefined",
 "violin", "void", "vampire", "while", "winter", "what"]
 
@@ -70,6 +70,8 @@ function createAudioObject() {
 function generateImages() {
     document.getElementById("resultsView").style.visibility = "visible";
     document.getElementById("wordView").style.visibility = "visible";
+    document.getElementById("resultsView").style.display = "block";
+    document.getElementById("wordView").style.display = "block";
     insertImage("spectrum_image", "images/spectrum.jpg");
     document.getElementById("spectrum_settings_button").setAttribute("style", "display: inline");
     document.getElementById("spectrum_download_button").setAttribute("style", "display: inline");
@@ -78,7 +80,7 @@ function generateImages() {
     document.getElementById("cepstrum_settings_button").setAttribute("style", "display: inline");
     document.getElementById("cepstrum_download_button").setAttribute("style", "display: inline");
     document.getElementById("cepstrum_download_button_a").setAttribute("href", "images/cepstrum.png");
-    for (var i = 1; i < 10; i++)
+    for (var i = 1; i <= 10; i++)
         insertWord("guess"+i, words[Math.floor(Math.random() * words.length)]);
 }
 

@@ -177,7 +177,19 @@ textarea:focus, button:focus{
 .viewResults {
     min-height: auto;
     visibility: collapse;
+    display: none;
 }
+
+/*.viewResults {*/
+    /*width: 0;*/
+    /*height: 0;*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+/*}*/
+
+/*.viewResults:empty {*/
+    /*display: none;*/
+/*}*/
 
 .resultsLi{
     display: inline-flex;
@@ -192,16 +204,18 @@ textarea:focus, button:focus{
 .imageDiv{
     min-width: 560px;
 }
+
 .g1{
-    font-size: 20px;
+    font-size: 40px;
+    text-decoration: underline;
 }
 
 .g2{
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .g3{
-    font-size: 25px;
+    font-size: 30px;
 }
 
 .g4{
@@ -209,7 +223,7 @@ textarea:focus, button:focus{
 }
 
 .g5{
-    font-size: 17px;
+    font-size: 14px;
 }
 
 .link{

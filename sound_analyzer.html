@@ -14,12 +14,12 @@
 <div class="center">
     <h1>Sound Analyzer</h1>
     <h2>
-        This sound analyzer will help you to increase your stupidity level to maximum. Kuzma, Kuzma, Kuzma. Our team wish you the best! Pauliau, nemandravok.
+        This sound analyzer will help you to recognize separate words.
     </h2>
     <ul class="nav">
         <li class="startLi">
             <div class="button-container">
-                <button type="button" class="btn" id="record_stop_button" onclick="recordStop()" ><i class="fa fa-play"></i></button>
+                <button type="button" class="btn" id="record_stop_button" title="Make sure your browser settings allow sound recording" onclick="recordStop()" ><i class="fa fa-play"></i></button>
             </div>
         </li>
         <li class="startLi">
@@ -30,7 +30,7 @@
         </li>
         <li class="startLi">
             <div class="button-container">
-                <button type="button" class="btn btnGen" id="generate_images_button" onclick="generateImages()">View</button>
+                <button type="button" class="btn btnGen" title="View Results" id="generate_images_button" onclick="generateImages()">View</button>
             </div>
         </li>
     </ul>
@@ -38,9 +38,10 @@
 
 <div id="wordView" class="center viewResults">
     <div>
+        <h1>Results</h1>
         <ul class="nav">
             <li class="startLi">
-                <h2 id="guess1" class="g1"></h2>
+                <h2 id="guess1" class="g5"></h2>
             </li>
             <li class="startLi">
                 <h3 id="guess2" class="g2"></h3>
@@ -75,6 +76,7 @@
 
 
 <div id="resultsView" class="center viewResults">
+    <h1>Details</h1>
     <ul class="nav">
         <li class="resultsLi">
             <div class="imageDiv">
@@ -113,14 +115,20 @@
         <h2>Spectrogram settings</h2>
         <h3>Plot axis</h3>
         <form id="custom_spectrum_axis">
-            <label class="container">X-axis
-                <input type="radio" name="radio">
-                <span class="checkmark"></span>
-            </label>
-            <label class="container">Y-axis
-                <input type="radio" name="radio">
-                <span class="checkmark"></span>
-            </label>
+            <ul class="nav">
+                <li class="resultsLi">
+                    <label class="container">X-axis
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                </li>
+                <li class="resultsLi">
+                    <label class="container">Y-axis
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                </li>
+            </ul>
         </form>
         <h3>Number of overlapped samples</h3>
         <input type="number" id="custom_spectrum_noverlap">
@@ -140,14 +148,20 @@
         <h2>Cepstrum</h2>
         <h3>Plot axis</h3>
         <form id="custom_cepstrum_axis">
-            <label class="container">X-axis
-                <input type="radio" name="radio">
-                <span class="checkmark"></span>
-            </label>
-            <label class="container">Y-axis
-                <input type="radio" name="radio">
-                <span class="checkmark"></span>
-            </label>
+            <ul class="nav">
+                <li class="resultsLi">
+                    <label class="container">X-axis
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                </li>
+                <li class="resultsLi">
+                    <label class="container">Y-axis
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                </li>
+            </ul>
         </form>
         <h3>Sampling frequency, Hz</h3>
         <input type="number" id="custom_cepstrum_frequency">
