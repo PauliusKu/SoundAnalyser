@@ -16,14 +16,6 @@
     <h2>
         This sound analyzer will help you to increase your stupidity level to maximum. Kuzma, Kuzma, Kuzma. Our team wish you the best! Pauliau, nemandravok.
     </h2>
-	<div>
-		<p id="guess1"></p>
-		<p id="guess2"></p>
-		<p id="guess3"></p>
-		<p id="guess4"></p>
-		<p id="guess5"></p>
-	</div>
-
     <ul class="nav">
         <li class="startLi">
             <div class="button-container">
@@ -32,7 +24,7 @@
         </li>
         <li class="startLi">
             <div class="button-container">
-                <h3 id="arrow"></h3>
+                <h4 id="arrow"></h4>
                 <audio id="audioPlayer"></audio>
             </div>
         </li>
@@ -43,6 +35,30 @@
         </li>
     </ul>
 </div>
+
+<div id="wordView" class="center viewResults">
+    <div>
+        <ul class="nav">
+            <li class="startLi">
+                <h2 id="guess1" class="g1"></h2>
+            </li>
+            <li class="startLi">
+                <h3 id="guess2" class="g2"></h3>
+            </li>
+            <li class="startLi">
+                <h3 id="guess3" class="g3"></h3>
+            </li>
+            <li class="startLi">
+                <h3 id="guess4" class="g4"></h3>
+            </li>
+            <li class="startLi">
+                <h3 id="guess5" class="g5"></h3>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
 <div id="resultsView" class="center viewResults">
     <ul class="nav">
         <li class="resultsLi">
@@ -79,41 +95,53 @@
 <div id="spectrum_settings" class="modal">
     <div class="modal-content">
         <span class="close"  onclick="closeSpectrumSettings()">&times;</span>
-        <p>Spectrogram settings</p>
-        <p>Plot axis</p>
+        <h2>Spectrogram settings</h2>
+        <h3>Plot axis</h3>
         <form id="custom_spectrum_axis">
-        	<input type="radio" name="spectrum_axis" value="x">X-axis
-        	<input type="radio" name="spectrum_axis" value="y">Y-axis
+            <label class="container">X-axis
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Y-axis
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
         </form>
-        <p>Number of overlapped samples</p>
+        <h3>Number of overlapped samples</h3>
         <input type="number" id="custom_spectrum_noverlap">
-        <p>Number of DFT points</p>
+        <h3>Number of DFT points</h3>
         <input type="number" id="custom_spectrum_nfft">
-        <p>Sampling interval, s</p>
-        Start:
+        <h3>Sampling interval, s</h3>
+        <h5>Start</h5>
         <input type="number" id="custom_spectrum_start">
-        End:
+        <h5>End</h5>
         <input type="number" id="custom_spectrum_end">
-        <input type="button" id="custom_spectrum_settings_apply" value="apply" onclick="closeSpectrumSettings()">
+        <button id="custom_spectrum_settings_apply" class="btn1 btnOpt" onclick="closeSpectrumSettings()">apply</button>
     </div>
 </div>
 <div id="cepstrum_settings" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeCepstrumSettings()">&times;</span>
-        <p>Cepstrum</p>
-        <p>Plot axis</p>
+        <h2>Cepstrum</h2>
+        <h3>Plot axis</h3>
         <form id="custom_cepstrum_axis">
-        	<input type="radio" name="cepstrum_axis" value="x">X-axis
-        	<input type="radio" name="cesptrum_axis" value="y">Y-axis
+            <label class="container">X-axis
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Y-axis
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
         </form>
-        <p>Sampling frequenzy, Hz</p>
+        <h3>Sampling frequency, Hz</h3>
         <input type="number" id="custom_cepstrum_frequency">
-        <p>Sampling interval, s</p>
-        Start:
+        <h3>Sampling interval, s</h3>
+        <h5>Start</h5>
         <input type="number" id="custom_cepstrum_start">
-        End:
+        <h5>End</h5>
         <input type="number" id="custom_cepstrum_end">
-        <input type="button" id="custom_cepstrum_settings_apply" value="apply" onclick="closeSpectrumSettings()">
+        <button id="custom_cepstrum_settings_apply" class="btn1 btnOpt" onclick="closeCepstrumSettings()">apply</button>
     </div>
 </div>
 </body>

@@ -63,6 +63,7 @@ function createAudioObject() {
 
 function generateImages() {
     document.getElementById("resultsView").style.visibility = "visible";
+    document.getElementById("wordView").style.visibility = "visible";
     insertImage("spectrum_image", "images/spectrum.jpg");
     document.getElementById("spectrum_settings_button").setAttribute("style", "display: inline");
     document.getElementById("spectrum_download_button").setAttribute("style", "display: inline");
