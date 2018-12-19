@@ -2,6 +2,12 @@ var audioContext;
 var recorder;
 var isRecording;
 
+var words = ["apple", "allocator", "arrow","bottle", "boolean", "bomb", "commit die", "case", "cancer", "drum", "double", "deez nuts", "else", "ebola", "erect",
+"false", "for", "fail", "gobble", "gulag", "George W. Bush", "hitler", "Hiroshima", "harambe", "inbred", "ironic", "Israel", "jew", "John Cena", "jiggle", "knee grows", 
+"kebabas su astriu ir cesnakiniu padazu issinesimui", "keylogger", "linux", "load", "lego", "Mein kampf", "MySQL", "mind", "native", "negromancy", "nemo",
+"Osama", "opera", "octopus", "private", "public", "pipe", "return", "runescape", "rainbows", "std", "squid", "santa", "try", "this", "turkey", "ur mum", "using", "undefined",
+"violin", "void", "vampire", "while", "winter", "what"]
+
 function startUserMedia(stream) {
     var input = audioContext.createMediaStreamSource(stream);
     recorder = new Recorder(input);
@@ -72,12 +78,8 @@ function generateImages() {
     document.getElementById("cepstrum_settings_button").setAttribute("style", "display: inline");
     document.getElementById("cepstrum_download_button").setAttribute("style", "display: inline");
     document.getElementById("cepstrum_download_button_a").setAttribute("href", "images/cepstrum.png");
-    insertWord("guess1", "Kebabas");
-    insertWord("guess2", "Du kebabai");
-    insertWord("guess3", "Trys kebabai");
-    insertWord("guess4", "Keturi kebabai");
-    insertWord("guess5", "Penki kebabai");
-
+    for (var i = 1; i < 10; i++)
+        insertWord("guess"+i, words[Math.floor(Math.random() * words.length)]);
 }
 
 function insertImage(destination, source){
