@@ -71,13 +71,23 @@ function generateImages() {
     document.getElementById("cepstrum_settings_button").setAttribute("style", "display: inline");
     document.getElementById("cepstrum_download_button").setAttribute("style", "display: inline");
     document.getElementById("cepstrum_download_button_a").setAttribute("href", "images/cepstrum.png");
-    document.getElementById("word").innerHTML = "Kebabas";
+    insertWord("guess1", "Kebabas");
+    insertWord("guess2", "Du kebabai");
+    insertWord("guess3", "Trys kebabai");
+    insertWord("guess4", "Keturi kebabai");
+    insertWord("guess5", "Penki kebabai");
+
 }
 
 function insertImage(destination, source){
     var image = document.getElementById(destination);
     image.setAttribute("src", source);
     //galima prideti daugiau atributu
+}
+
+function insertWord(destination, source){
+    var word = document.getElementById(destination);
+    word.innerHTML = source;
 }
 
 function openSpectrumSettings(){
