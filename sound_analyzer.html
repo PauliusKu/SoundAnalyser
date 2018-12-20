@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Title</title>
+    <title>Sound Analyzer</title>
     <script src="scripts/recorder.js"></script>
     <script src="scripts/controls.js"></script>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" type="text/css" href="styles/sound_analyzer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body onload="initialize()">
+<body>
 <div class="center">
     <h1>Sound Analyzer</h1>
     <h2>
@@ -19,7 +19,7 @@
     <ul class="nav">
         <li class="startLi">
             <div class="button-container">
-                <button type="button" class="btn" id="record_stop_button" title="Make sure your browser settings allow sound recording" onclick="recordStop()" ><i class="fa fa-play"></i></button>
+                <button type="button" class="btn" id="record_stop_button" title="Make sure your browser settings allow sound recording" onclick="start()" ><i class="fa fa-play"></i></button>
             </div>
         </li>
         <li class="startLi">

@@ -1,9 +1,10 @@
 var audioContext;
 var recorder;
 var isRecording;
+var isInitialized = false;
 
-var words = ["apple", "allocator", "arrow","bottle", "boolean", "bomb", "Kuzma", "case", "cancer", "drum", "double", "nuts", "else", "ebola", "erect",
-"false", "for", "fail", "gobble", "gulag", "George W. Bush", "Lukis", "Hiroshima", "harambe", "inbred", "ironic", "Israel", "Gudas", "John Cena", "jiggle", "Saulius",
+var words = ["apple", "allocator", "arrow","bottle", "boolean", "bomb", "throw the jew down the well", "case", "cancer", "drum", "double", "nuts", "else", "ebola", "erect",
+"false", "for", "fail", "gobble", "gulag", "George W. Bush", "jews", "Hiroshima", "harambe", "inbred", "ironic", "Israel", "Gudas", "John Cena", "jiggle", "Saulius", "Giedrelis",
 "kebabas su astriu ir cesnakiniu padazu issinesimui", "keylogger", "linux", "load", "lego", "Mein kampf", "MySQL", "mind", "native", "Daugis", "nemo",
 "Osama", "opera", "octopus", "private", "public", "pipe", "return", "runescape", "rainbows", "std", "squid", "santa", "try", "this", "turkey", "ur mum", "using", "undefined",
 "violin", "void", "vampire", "while", "winter", "what"]
@@ -24,12 +25,19 @@ function initialize() {
         window.URL = window.URL || window.webkitURL;
         audioContext = new AudioContext;
         isRecording = false;
+        isInitialized = true;
         // document.getElementById("generate_images_button").disabled = true;
     } catch (e) {
         alert('No web audio support in this browser!');
     }
     
     navigator.getUserMedia({audio: true}, startUserMedia, function(e) {});
+}
+
+function start(){
+    if (!isInitialized)
+        initialize();
+    recordStop();
 }
 
 function recordStop(){
